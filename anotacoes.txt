@@ -1,0 +1,11 @@
+criação de variaveis
+
+:root{
+    --primaryColor: #F3E600;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: var(--primaryColor);
+}

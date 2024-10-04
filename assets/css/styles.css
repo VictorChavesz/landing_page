@@ -1,0 +1,135 @@
+:root{
+    --primaryColor: #F3E600;
+    --gap: 3rem;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.9rem;
+    color: var(--primaryColor);
+}
+
+/*
+Paletas de cores
+#000000
+#C5003C
+#880425
+#F3E600
+#55EAD4
+*/
+
+body{
+    font-family:"Open Sans", sans-serif;;
+}
+
+h1, h2, h3, h4 ,h5 ,h6{
+    font-family: "Montserrat", sans-serif;
+}
+
+h1{
+    font-size: 8rem;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 7rem;
+}
+
+h3{
+    font-size: 6rem;
+}
+
+h4{
+    font-size: 5rem;
+}
+
+h5{
+    font-size: 4rem;
+}
+
+h6{
+    font-size: 3rem;
+}
+
+.mainBg{
+    background-image: url('../img/main-bg.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.secondBg{
+    background-image: url('../img/second-bg.svg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.thirdBg{
+    background-image: url('../img/thid-bg.svg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.whiteBg{
+    background-color: white;
+    color: #C5003C;
+}
+
+.main-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+.section{
+    min-height: 100vh;
+    scroll-margin-top: 6rem;
+    padding-top: 6rem;
+}
+
+.mainBar{
+    width: 100%;
+    height: 6rem;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.mainBar .navegacao{
+    width: 1200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--gap);
+
+    .logo{
+        font-weight: bold;
+    }
+
+    .menu ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        li{
+            padding: 10px;
+        }
+
+        li a{
+            text-decoration: none;
+            color: #C5003C;
+        }
+    }
+}
