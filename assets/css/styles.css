@@ -39,6 +39,7 @@ h1, h2, h3, h4 ,h5 ,h6{
 h1{
     font-size: 8rem;
     text-transform: uppercase;
+    font-style: italic;
 }
 
 h2{
@@ -62,10 +63,11 @@ h6{
 }
 
 .mainBg{
-    background-image: url('../img/main-bg.svg');
+    background-image: url('../img/confetti-doodles\ \(1\).svg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
+    /*background: linear-gradient(to bottom, #55EAD4, white);*/
 }
 
 .secondBg{
@@ -91,9 +93,8 @@ h6{
     padding: var(--gap);
 }
 
-.section{
+.section:not(section#intro){
     min-height: 100vh;
-    scroll-margin-top: 6rem;
     padding-top: 6rem;
 }
 
@@ -103,6 +104,7 @@ h6{
     position: fixed;
     display: flex;
     justify-content: center;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.055);
 }
 
 .mainBar .navegacao{
@@ -132,4 +134,47 @@ h6{
             color: #C5003C;
         }
     }
+}
+
+.intro-content-grid{
+    margin: auto auto;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+        'titulo imagem'
+        'texto imagem';
+    height: 372px;
+    gap: 20px;
+
+    div:nth-child(1){
+        grid-area: titulo;
+    }
+    
+    div:nth-child(2){
+        grid-area: texto;
+
+        p::first-letter{
+            font-size: 5rem;
+            display: block;
+            float: left;
+            margin: 0 15px 5px 0;
+            font-weight: bold;
+            text-shadow: 2px 2px #55EAD4;
+            font-style: italic;
+        }
+    }
+    
+    div:nth-child(3){
+        grid-area: imagem;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.mainBg.section .main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
