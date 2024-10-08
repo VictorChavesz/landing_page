@@ -88,7 +88,7 @@ h6{
 }
 
 .main-content{
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     padding: var(--gap);
 }
@@ -104,11 +104,11 @@ h6{
     position: fixed;
     display: flex;
     justify-content: center;
-    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.055);
+    box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.055);
 }
 
-.mainBar .navegacao{
-    width: 1200px;
+.mainBar .main-content{
+    width: 120rem;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -117,6 +117,15 @@ h6{
 
     .logo{
         font-weight: bold;
+        
+        a{
+            text-decoration: none;
+            color: #C5003C;
+            
+            h1{
+                font-size: 5rem;
+            }
+        }
     }
 
     .menu ul{
@@ -124,14 +133,21 @@ h6{
         margin: 0;
         padding: 0;
         display: flex;
-
-        li{
-            padding: 10px;
-        }
+        justify-content: space-between;
+        position: relative;
 
         li a{
+            display: block;
             text-decoration: none;
             color: #C5003C;
+            padding: 2rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+
+        }
+
+        li a:hover{
+            box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.08);
         }
     }
 }
@@ -144,8 +160,8 @@ h6{
     grid-template-areas: 
         'titulo imagem'
         'texto imagem';
-    height: 372px;
-    gap: 20px;
+    height: 37.2rem;
+    gap: 2rem;
 
     div:nth-child(1){
         grid-area: titulo;
@@ -160,7 +176,7 @@ h6{
             float: left;
             margin: 0 15px 5px 0;
             font-weight: bold;
-            text-shadow: 2px 2px #55EAD4;
+            text-shadow: 0.2rem 0.2rem #55EAD4;
             font-style: italic;
         }
     }
@@ -177,4 +193,23 @@ h6{
     align-items: center;
     justify-content: center;
     height: 100vh;
+}
+
+section#top3{
+    text-align: center;
+    
+    div.main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div{
+            padding: 2rem;
+
+            h5{
+                font-style: italic;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
 }
