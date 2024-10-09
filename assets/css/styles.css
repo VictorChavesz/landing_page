@@ -67,7 +67,6 @@ h6{
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
-    /*background: linear-gradient(to bottom, #55EAD4, white);*/
 }
 
 .secondBg{
@@ -163,10 +162,16 @@ h6{
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
+    
 
     .intro-text{
         font-style: italic;
         word-spacing: 0.5rem;
+
+        img{
+            width: 650px;
+            height: 75%;
+        }
 
         p::first-letter{
                 display: block;
