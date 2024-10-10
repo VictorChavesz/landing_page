@@ -27,3 +27,12 @@ animaçãozinha
                 width: 50%;
                 left: 25%;
             }
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image
+
+fazer um svg se auto adequar a pagina
+
+img{
+    max-width: 100%;
+    height: auto;
+}

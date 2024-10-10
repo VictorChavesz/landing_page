@@ -69,18 +69,6 @@ h6{
     background-position: center center;
 }
 
-.secondBg{
-    background-image: url('../img/second-bg.svg');
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.thirdBg{
-    background-image: url('../img/thid-bg.svg');
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 .whiteBg{
     background-color: white;
     color: #C5003C;
@@ -104,7 +92,7 @@ h6{
     display: flex;
     justify-content: center;
     box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.055);
-    z-index: 1;
+    z-index: 2;
 }
 
 .mainBar .main-content{
@@ -133,7 +121,6 @@ h6{
         padding: 0;
         display: flex;
         justify-content: space-between;
-        position: relative;
 
         li a{
             display: block;
@@ -142,7 +129,7 @@ h6{
             padding: 2rem;
             font-size: 1.8rem;
             font-weight: bold;
-
+            position: relative;
         }
 
         li a:hover{
@@ -199,20 +186,77 @@ h6{
 }
 
 section#top3{
-    text-align: center;
-    
-    div.main-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        div{
-            padding: 2rem;
+section#top3 div.main-content{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        'titulo titulo titulo'
+        'top1 top2 top3';
+    gap: var(--gap);
+    counter-reset: topcount;
+}
 
-            h5{
-                font-style: italic;
-                margin-bottom: 0.5rem;
-            }
+.beforeTop{
+    h5::before{
+        counter-increment: topcount;
+        content: counter(topcount);
+        font-size: 8rem;
+        margin-right: 3rem;
+        display: block;
+        rotate: 20deg;
+        float: left;
+    }
+}
+
+section#top3 #titulo {
+    grid-area: titulo;
+}
+
+section#top3 #top_1 {
+    grid-area: top1;
+}
+
+section#top3 #top_2 {
+    grid-area: top2;
+}
+
+section#top3 #top_3 {
+    grid-area: top3;
+
+}
+
+section#gallery .gallery-photos{
+    margin-top: var(--gap);
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+
+    div.photos{
+        width: 300px;
+        height: 300px;
+        margin: auto;
+
+        img{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transition: all 700ms;
+            z-index: 1;
+        }
+
+        img:hover{
+            rotate: -2deg;
+            width: 320px;
+            height: 320px;
+            z-index: 0;
         }
     }
 }
