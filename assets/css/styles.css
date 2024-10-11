@@ -2,6 +2,8 @@
     --primaryColor: #F3E600;
     --gap: 3rem;
     --secondaryColor: #55EAD4;
+    --thirdColor: #FF1616;
+    --fourthColor: #C5003C;
 }
 
 html{
@@ -73,7 +75,7 @@ h6{
 
 .whiteBg{
     background-color: white;
-    color: #C5003C;
+    color: var(--fourthColor);
 }
 
 .main-content{
@@ -130,7 +132,7 @@ h6{
         li a{
             display: block;
             text-decoration: none;
-            color: #FF1616;
+            color: var(--thirdColor);
             padding: 2rem;
             font-size: 1.8rem;
             font-weight: bold;
@@ -301,7 +303,7 @@ section#requires div.main-content{
             background-color: var(--secondaryColor);
             
             th{
-                background-color: #F3E600;
+                background-color: var(--primaryColor);
             }
 
             td{
