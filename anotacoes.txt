@@ -44,3 +44,4 @@ fazer um svg se auto adequar a pagina
 animação das fotos na galeria
 
     transform: translate(-2%,2%) scale(1.1) rotate(-3deg);
+    https://developer.mozilla.org/pt-BR/docs/Web/CSS/transform
