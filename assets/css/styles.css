@@ -26,6 +26,7 @@ Paletas de cores
 #880425
 #F3E600
 #55EAD4
+#FF1616
 */
 
 body{
@@ -82,7 +83,7 @@ h6{
 
 .section{
     min-height: 100vh;
-    padding-top: 6rem;
+    padding-top: var(--gap);
 }
 
 .mainBar{
@@ -107,10 +108,13 @@ h6{
         
         a{
             text-decoration: none;
-            color: #C5003C;
-            
-            h1{
-                font-size: 5rem;
+            font-size: 7rem;
+            text-transform: uppercase;
+            font-style: italic;
+
+            img{
+                width: 100%;
+                height: 6rem;
             }
         }
     }
@@ -125,11 +129,10 @@ h6{
         li a{
             display: block;
             text-decoration: none;
-            color: #C5003C;
+            color: #FF1616;
             padding: 2rem;
             font-size: 1.8rem;
             font-weight: bold;
-            position: relative;
         }
 
         li a:hover{
@@ -234,7 +237,6 @@ section#top3 #top_3 {
 section#gallery .gallery-photos{
     margin-top: var(--gap);
     width: 100%;
-    height: 70vh;
     display: flex;
     justify-content: space-evenly;
     flex-flow: row wrap;
@@ -242,21 +244,21 @@ section#gallery .gallery-photos{
     div.photos{
         width: 300px;
         height: 300px;
-        margin: auto;
+        margin: 2rem;
 
         img{
-            position: relative;
             width: 300px;
             height: 300px;
             transition: all 700ms;
-            z-index: 1;
+            z-index: 0;
         }
 
         img:hover{
             rotate: -2deg;
             width: 320px;
             height: 320px;
-            z-index: 0;
+            z-index: 1;
+            border: 4px solid #F3E600;
         }
     }
 }
