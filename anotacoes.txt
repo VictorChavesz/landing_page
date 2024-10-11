@@ -12,27 +12,35 @@ criação de variaveis
 
 animaçãozinha
 
-::after{
-                content: '';
-                position: absolute;
-                bottom: 1rem;
-                left: 50%;
-                width: 0;
-                height: 0.2rem;
-                background: #55EAD4;
-                transition: all 300ms ease-in-out;
-            }
+    ::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 50%;
+                    width: 0;
+                    height: 0.2rem;
+                    background: #55EAD4;
+                    transition: all 300ms ease-in-out;
+                }
 
-:hover::after{
-                width: 50%;
-                left: 25%;
-            }
+    :hover::after{
+                    width: 50%;
+                    left: 25%;
+                }
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image
+arredondamento da imagem
+
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 60%);
+
+    https://developer.mozilla.org/en-US/docs/Web/CSS/mask-image
 
 fazer um svg se auto adequar a pagina
 
-img{
-    max-width: 100%;
-    height: auto;
-}
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+animação das fotos na galeria
+
+    transform: translate(-2%,2%) scale(1.1) rotate(-3deg);
