@@ -78,6 +78,11 @@ h6{
     color: var(--fourthColor);
 }
 
+.content{
+    display: flex;
+    flex-flow: column wrap;
+}
+
 .main-content{
     max-width: 120rem;
     margin: 0 auto;
@@ -278,6 +283,7 @@ section#requires div.main-content{
         border-collapse: collapse;
         color: black;
         width: 100%;
+        min-width: 1000px;
         clip-path: polygon(
         20px 0,
         calc(100% - 15px) 0, 
@@ -311,5 +317,94 @@ section#requires div.main-content{
                 font-weight: bolder;
             }
         }
+    }
+}
+
+.responsive-table{
+    overflow: scroll; 
+}
+
+.section#contact .main-content .form-area{
+    display: grid;
+    grid-column: repeat(2, auto);
+    grid-row: repeat(2, auto);
+    grid-template-areas: 
+    'text image'
+    'form form';
+    gap: var(--gap);
+}
+
+div.grid-form:nth-child(1){
+    grid-area: text;
+}
+
+div.grid-form:nth-child(2){
+    grid-area: image;
+}
+
+div.grid-form:nth-child(3){
+    grid-area: form;
+}
+
+div#form{
+    width: 100%;
+    form{
+    display: grid;
+    grid-column: repeat(2, auto);
+    grid-row: repeat(4, auto);
+    gap: 1.5rem;
+    grid-template-areas: 
+    'first-name second-name'
+    'email email'
+    'massage massage'
+    'send send';
+    }
+
+    input{
+        width: 100%;
+        height: 50px;
+        border: none;
+        background-color: rgba(240, 248, 255, 0.897);
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+div.form-element{
+    margin: 10px;
+}
+
+div.form-element:nth-child(1){
+    grid-area: first-name;
+}
+
+div.form-element:nth-child(2){
+    grid-area: second-name;
+}
+
+div.form-element:nth-child(3){
+    grid-area: email;
+}
+
+div.form-element:nth-child(4){
+    grid-area: massage;
+}   
+
+div.form-element:nth-child(5){
+    grid-area: send;
+    
+    button{
+        width: 250px;
+        height: 50px;
+        background-color: transparent;
+        color: var(--primaryColor);
+        border: 2px solid var(--secondaryColor);
+        text-transform: uppercase;
+        transition: all 300ms;
+        
+    }
+
+    button:hover{
+        background-color: var(--fourthColor);
     }
 }
