@@ -391,6 +391,7 @@ div#form{
 
 div.form-element{
     margin: 1rem;
+
 }
 
 div.form-element:nth-child(1){
@@ -437,6 +438,15 @@ div.form-element:nth-child(5){
         color: black;
         cursor: pointer;
     }
+}
+
+label{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+fieldset{
+    border: none;
 }
 
 footer{
