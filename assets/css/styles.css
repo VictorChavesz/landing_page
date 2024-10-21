@@ -547,9 +547,32 @@ footer{
         align-items: center;
     }
 
+    .mainBar .main-content{
+        align-items: center;
+        justify-content: center;
+    }
+
     .mainBar .main-content, .menu ul{
         flex-flow: column;
         justify-content: center;
         align-items: center;
     }
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 2.5rem;
+    right: 0.5rem;
+    background: transparent;
+    color: var(--fourthColor);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid var(--fourthColor);
+    font-size: 2.5rem;
 }
