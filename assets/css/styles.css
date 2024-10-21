@@ -539,24 +539,6 @@ footer{
             cursor: pointer;
         }
     }
-
-    .mainBar{
-        bottom: 0;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .mainBar .main-content{
-        align-items: center;
-        justify-content: center;
-    }
-
-    .mainBar .main-content, .menu ul{
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-    }
 }
 
 .back-to-top{
